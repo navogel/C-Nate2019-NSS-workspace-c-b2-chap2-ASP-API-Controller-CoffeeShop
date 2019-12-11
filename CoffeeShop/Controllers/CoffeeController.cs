@@ -89,6 +89,10 @@ namespace CoffeeShop.Controllers
                     }
                     reader.Close();
 
+                    if (coffee == null)
+                    {
+                        return NotFound($"No Coffee found wit the ID of {id}");
+                    } 
                     return Ok(coffee);
                 }
             }

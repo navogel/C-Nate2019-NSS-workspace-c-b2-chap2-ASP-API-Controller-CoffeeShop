@@ -34,9 +34,15 @@ namespace CoffeeShop.Controllers
 
         [HttpGet("{id}")]
 
-        public IEnumerable<string> GetOne()
+        public Employee GetOne(string taco)
         {
-            return new List<string> { "this", "is", "two" };
+            return new Employee
+            {
+                FirstName = taco,
+                LastName = "yoyo",
+                Id = 99
+            };
+
         }
 
         [HttpPost]
